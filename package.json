@@ -1,0 +1,31 @@
+{
+  "name": "bootstrip-button",
+  "version": "0.0.0",
+  "description": "button plugin for bootstrip",
+  "main": "index.js",
+  "dependencies": {
+    "dom": "0.0.3"
+  },
+  "devDependencies": {
+    "tape": "~2.13.3"
+  },
+  "license": "MIT",
+  "keywords": [
+    "bootstrap",
+    "bootstrip",
+    "button",
+    "browser"
+  ],
+  "author": "Evan Lucas <evanlucas@me.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evanlucas/bootstrip-button"
+  },
+  "homepage": "https://github.com/evanlucas/bootstrip-button",
+  "bugs": {
+    "url": "https://github.com/evanlucas/bootstrip-button/issues"
+  },
+  "browser": {
+    "bootstrip-button": "index.js"
+  }
+}
