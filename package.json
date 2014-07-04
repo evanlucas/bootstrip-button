@@ -10,6 +10,9 @@
     "tape": "~2.13.3",
     "testling": "~1.7.0"
   },
+  "scripts": {
+    "test": "testling `pwd`"
+  },
   "license": "MIT",
   "keywords": [
     "bootstrap",
