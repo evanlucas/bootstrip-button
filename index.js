@@ -43,7 +43,12 @@ Button.prototype.setState = function(state) {
 
   this.proxy(state)
 }
-  }
+
+Button.prototype.toggle = function() {
+  if (this.isLoading)
+    return this.setState('reset')
+
+  return this.setState('loading')
 }
 
 Button.prototype.isInput = function() {
