@@ -21,16 +21,28 @@ function Button(ele, opts) {
 
 Button.prototype.setState = function(state) {
   var d = 'disabled'
-  var val = this.isInput(this.ele) ? 'val' : 'html'
-  state = state + 'Text'
+  var is = this.isInput()
+  var val = is ? 'val' : 'html'
   var state_ = state + '-text'
-  if (this.ele.data('reset-text') == null)
-    this.ele.data('reset-text', this.ele[val]())
+  state = state + 'Text'
+
+  if (!this.ele.data('reset-text')) {
+    var v = is ? this.ele.value() : this.ele.html()
+    this.ele.data('reset-text', v)
+  }
 
   if (this.ele.data(state_) == null) {
-    this.ele[val](this.options[state_])
+    var v = this.opts[state]
+    if (is) this.ele.value(v)
+    else this.ele.html(v)
   } else {
-    this.ele[val](this.ele.data(state_))
+    var v = this.ele.data(state_)
+    if (is) this.ele.value(v)
+    else this.ele.html(v)
+  }
+
+  this.proxy(state)
+}
   }
 }
 
