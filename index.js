@@ -19,6 +19,16 @@ function Button(ele, opts) {
   this.isLoading = false
 }
 
+Button.prototype.loading = function() {
+  if (this.isLoading) return
+  this.setState('loading')
+}
+
+Button.prototype.reset = function() {
+  if (!this.isLoading) return
+  this.setState('reset')
+}
+
 Button.prototype.setState = function(state) {
   var d = 'disabled'
   var is = this.isInput()
