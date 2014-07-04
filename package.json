@@ -1,6 +1,6 @@
 {
   "name": "bootstrip-button",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "button plugin for bootstrip",
   "main": "index.js",
   "dependencies": {
