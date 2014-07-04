@@ -34,9 +34,8 @@ Button.prototype.setState = function(state) {
   }
 }
 
-Button.prototype.isInput = function(el) {
-  if (!el) return false
-  var tag = el.tagName && el.tagName.toLowerCase()
+Button.prototype.isInput = function() {
+  var tag = this.ele[0].tagName && this.ele[0].tagName.toLowerCase()
   return tag && tag === 'input'
 }
 
