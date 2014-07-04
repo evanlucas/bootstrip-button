@@ -1,6 +1,6 @@
 {
   "name": "bootstrip-button",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "button plugin for bootstrip",
   "main": "index.js",
   "dependencies": {
@@ -33,7 +33,9 @@
     "bootstrip-button": "index.js"
   },
   "testling": {
-    "files": ["test/main.js"],
+    "files": [
+      "test/main.js"
+    ],
     "browsers": [
       "safari/latest",
       "ie/9..latest",
