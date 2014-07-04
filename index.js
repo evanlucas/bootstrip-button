@@ -39,6 +39,14 @@ Button.prototype.isInput = function(el) {
   var tag = el.tagName && el.tagName.toLowerCase()
   return tag && tag === 'input'
 }
+
+Button.prototype.val = function() {
+  if (this.isInput())
+    return this.ele.value()
+
+  return this.ele.html()
+}
+
 Button.prototype.proxy = function(state) {
   if (state === 'loadingText' || state === 'loading-text') {
     this.isLoading = true
