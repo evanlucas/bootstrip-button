@@ -39,3 +39,12 @@ Button.prototype.isInput = function(el) {
   var tag = el.tagName && el.tagName.toLowerCase()
   return tag && tag === 'input'
 }
+Button.prototype.proxy = function(state) {
+  if (state === 'loadingText' || state === 'loading-text') {
+    this.isLoading = true
+    this.ele.addClass('disabled').attr('disabled', 'disabled')
+  } else if (this.isLoading) {
+    this.isLoading = false
+    this.ele.removeClass('disabled').removeAttr('disabled')
+  }
+}
