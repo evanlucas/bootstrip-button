@@ -6,6 +6,12 @@ function Button(ele, opts) {
   if (!(this instanceof Button))
     return new Button(ele, opts)
 
+  if ('string' === typeof opts) {
+    opts = {
+      loadingText: opts
+    }
+  }
+  opts = opts || {}
   this.opts = {
     loadingText: opts.loadingText || 'loading...'
   }
