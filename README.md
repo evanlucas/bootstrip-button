@@ -2,6 +2,8 @@
 
 [Twitter bootstrap](https://github.com/twbs/bootstrap) button without jQuery
 
+All credit goes to the devs of bootstrap as this is heavily based on the button plugin from it
+
 ## Install
 
 ```bash
