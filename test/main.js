@@ -1,4 +1,4 @@
-require('./bind')
+require('pbind')
 
 var $ = require('dom')
   , test = require('tape')
